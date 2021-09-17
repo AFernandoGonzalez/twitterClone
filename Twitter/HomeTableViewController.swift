@@ -23,6 +23,7 @@ class HomeTableViewController: UITableViewController {
         //
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
+    
     }
     
     //part 2

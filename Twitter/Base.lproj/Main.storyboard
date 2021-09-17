@@ -155,19 +155,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="112" id="tRF-2S-gLr" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="375" height="112"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="190" id="tRF-2S-gLr" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="375" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tRF-2S-gLr" id="bxN-8h-64g">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wlK-ah-0Ta">
-                                            <rect key="frame" x="16" y="11" width="108" height="90"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="80" id="PzX-X6-MfZ"/>
-                                                <constraint firstAttribute="width" constant="80" id="a22-vI-UE1"/>
-                                            </constraints>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wlK-ah-0Ta">
+                                            <rect key="frame" x="16" y="11" width="108" height="104"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-hD-dEN">
                                             <rect key="frame" x="150" y="11" width="209" height="21"/>
@@ -183,13 +180,17 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48M-8d-TXk">
+                                            <rect key="frame" x="323" y="149" width="36" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="faveIcon" image="favor-icon"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0Y-1e-Mhl">
+                                            <rect key="frame" x="278" y="149" width="37" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="retweetButton" image="retweet-icon"/>
+                                        </button>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="wlK-ah-0Ta" secondAttribute="trailing" constant="235" id="CPt-OQ-wod"/>
-                                        <constraint firstItem="wlK-ah-0Ta" firstAttribute="leading" secondItem="bxN-8h-64g" secondAttribute="leadingMargin" id="JLd-8M-R4V"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="wlK-ah-0Ta" secondAttribute="bottom" id="OMI-W3-wLZ"/>
-                                        <constraint firstItem="wlK-ah-0Ta" firstAttribute="top" secondItem="bxN-8h-64g" secondAttribute="topMargin" id="OpJ-y3-1ia"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="profileImageView" destination="wlK-ah-0Ta" id="bXM-ZA-3QM"/>
@@ -311,7 +312,9 @@
     <resources>
         <image name="TwitterLogoBlue" width="200" height="200"/>
         <image name="apple-1" width="512" height="512"/>
+        <image name="favor-icon" width="30" height="30"/>
         <image name="google" width="512" height="512"/>
+        <image name="retweet-icon" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
